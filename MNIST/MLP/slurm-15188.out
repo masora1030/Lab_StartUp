@@ -1,0 +1,55 @@
+train_dataset =  48000
+valid_dataset =  12000
+test_dataset =  10000
+training start ...
+Epoch [1/50], Loss: 0.0066, val_loss: 0.0029, val_acc: 0.9436
+Epoch [2/50], Loss: 0.0028, val_loss: 0.0021, val_acc: 0.9583
+Epoch [3/50], Loss: 0.0021, val_loss: 0.0018, val_acc: 0.9650
+Epoch [4/50], Loss: 0.0017, val_loss: 0.0015, val_acc: 0.9721
+Epoch [5/50], Loss: 0.0015, val_loss: 0.0014, val_acc: 0.9721
+Epoch [6/50], Loss: 0.0013, val_loss: 0.0013, val_acc: 0.9746
+Epoch [7/50], Loss: 0.0011, val_loss: 0.0012, val_acc: 0.9768
+Epoch [8/50], Loss: 0.0010, val_loss: 0.0012, val_acc: 0.9762
+Epoch [9/50], Loss: 0.0009, val_loss: 0.0012, val_acc: 0.9763
+Epoch [10/50], Loss: 0.0008, val_loss: 0.0012, val_acc: 0.9758
+Epoch [11/50], Loss: 0.0008, val_loss: 0.0011, val_acc: 0.9779
+Epoch [12/50], Loss: 0.0007, val_loss: 0.0010, val_acc: 0.9789
+Epoch [13/50], Loss: 0.0007, val_loss: 0.0010, val_acc: 0.9799
+Epoch [14/50], Loss: 0.0006, val_loss: 0.0010, val_acc: 0.9786
+Epoch [15/50], Loss: 0.0006, val_loss: 0.0010, val_acc: 0.9796
+Epoch [16/50], Loss: 0.0006, val_loss: 0.0010, val_acc: 0.9808
+Epoch [17/50], Loss: 0.0005, val_loss: 0.0010, val_acc: 0.9812
+Epoch [18/50], Loss: 0.0005, val_loss: 0.0010, val_acc: 0.9808
+Epoch [19/50], Loss: 0.0005, val_loss: 0.0009, val_acc: 0.9804
+Epoch [20/50], Loss: 0.0005, val_loss: 0.0009, val_acc: 0.9818
+Epoch [21/50], Loss: 0.0005, val_loss: 0.0009, val_acc: 0.9807
+Epoch [22/50], Loss: 0.0004, val_loss: 0.0010, val_acc: 0.9808
+Epoch [23/50], Loss: 0.0004, val_loss: 0.0009, val_acc: 0.9824
+Epoch [24/50], Loss: 0.0004, val_loss: 0.0009, val_acc: 0.9817
+Epoch [25/50], Loss: 0.0004, val_loss: 0.0009, val_acc: 0.9814
+Epoch [26/50], Loss: 0.0004, val_loss: 0.0009, val_acc: 0.9812
+Epoch [27/50], Loss: 0.0004, val_loss: 0.0010, val_acc: 0.9812
+Epoch [28/50], Loss: 0.0004, val_loss: 0.0009, val_acc: 0.9822
+Epoch [29/50], Loss: 0.0004, val_loss: 0.0009, val_acc: 0.9813
+Epoch [30/50], Loss: 0.0004, val_loss: 0.0009, val_acc: 0.9812
+Epoch [31/50], Loss: 0.0004, val_loss: 0.0009, val_acc: 0.9822
+Epoch [32/50], Loss: 0.0004, val_loss: 0.0009, val_acc: 0.9813
+Epoch [33/50], Loss: 0.0004, val_loss: 0.0009, val_acc: 0.9816
+Epoch [34/50], Loss: 0.0003, val_loss: 0.0009, val_acc: 0.9799
+Epoch [35/50], Loss: 0.0004, val_loss: 0.0009, val_acc: 0.9833
+Epoch [36/50], Loss: 0.0004, val_loss: 0.0009, val_acc: 0.9828
+Epoch [37/50], Loss: 0.0004, val_loss: 0.0009, val_acc: 0.9830
+Epoch [38/50], Loss: 0.0003, val_loss: 0.0009, val_acc: 0.9821
+Epoch [39/50], Loss: 0.0003, val_loss: 0.0010, val_acc: 0.9804
+Epoch [40/50], Loss: 0.0003, val_loss: 0.0009, val_acc: 0.9821
+Epoch [41/50], Loss: 0.0003, val_loss: 0.0009, val_acc: 0.9823
+Epoch [42/50], Loss: 0.0003, val_loss: 0.0009, val_acc: 0.9828
+Epoch [43/50], Loss: 0.0003, val_loss: 0.0009, val_acc: 0.9815
+Epoch [44/50], Loss: 0.0003, val_loss: 0.0009, val_acc: 0.9831
+Epoch [45/50], Loss: 0.0003, val_loss: 0.0009, val_acc: 0.9822
+Epoch [46/50], Loss: 0.0003, val_loss: 0.0009, val_acc: 0.9825
+Epoch [47/50], Loss: 0.0003, val_loss: 0.0009, val_acc: 0.9832
+Epoch [48/50], Loss: 0.0003, val_loss: 0.0009, val_acc: 0.9822
+Epoch [49/50], Loss: 0.0003, val_loss: 0.0009, val_acc: 0.9821
+Epoch [50/50], Loss: 0.0003, val_loss: 0.0009, val_acc: 0.9828
+test_accuracy: 98.41 %
