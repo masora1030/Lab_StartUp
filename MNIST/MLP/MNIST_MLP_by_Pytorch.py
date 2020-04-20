@@ -5,6 +5,7 @@ import torch.nn.functional as F
 import torchvision.datasets as dsets
 import torchvision.transforms as transforms
 # import matplotlib.image as img
+import time
 
 
 # load MNIST data
@@ -32,19 +33,19 @@ print('test_dataset = ', len(test_dataset)) # 10000
 # データセットからミニバッチ単位でデータを取り出し、ネットワークへ供給するためのローダー(バッチ処理の準備)
 train_loader = torch.utils.data.DataLoader(
     dataset=train_dataset,  # データセットの指定
-    batch_size=64,  # ミニバッチの指定
+    batch_size=100,  # ミニバッチの指定
     shuffle=True,  # シャッフルするかどうかの指定
     num_workers=2)  # コアの数
 
 valid_loader = torch.utils.data.DataLoader(
     dataset=valid_dataset,
-    batch_size=64,
+    batch_size=100,
     shuffle=False,
     num_workers=2)
 
 test_loader = torch.utils.data.DataLoader(
     dataset=test_dataset,
-    batch_size=64,
+    batch_size=100,
     shuffle=False,
     num_workers=2)
 
@@ -88,6 +89,8 @@ network = MLPNet().to(device) # networkにさっき定義したnetworkを代入
 criterion = nn.CrossEntropyLoss() # 交差エントロピーをloss計算に用いる。
 optimizer = optim.SGD(network.parameters(), lr=0.01, momentum=0.9, weight_decay=5e-4) # optimizrに勾配確率降下法を指定
 optKind = 'SGD'
+
+start_time = time.time()
 
 ###  training
 print('training start ...')
@@ -142,6 +145,8 @@ for epoch in range(num_epochs):
     val_loss_list.append(avg_val_loss)
     val_acc_list.append(avg_val_acc)
 
+stop_time = time.time()
+
 # ======== fainal test ======
 # 最終評価する
 network.eval()
@@ -154,6 +159,7 @@ with torch.no_grad():
         test_acc += (outputs.max(1)[1] == labels).sum().item()
         total += labels.size(0)
     print('test_accuracy: {} %'.format(100 * test_acc / total))
+    print('learning time: {:.3f} [sec]'.format(stop_time - start_time))
 
 # save weights
 torch.save(network.state_dict(), 'mnist_net.ckpt')
@@ -170,7 +176,7 @@ plt.xlabel('epoch')
 plt.ylabel('loss')
 plt.title('MLP Training and validation loss by {}'.format(optKind))
 plt.grid()
-plt.savefig('loss{}.png'.format(optKind))
+plt.savefig('loss{}.png'.format('MLP'))
 
 plt.figure()
 plt.plot(range(num_epochs), train_acc_list, color='blue', linestyle='-', label='train_acc')
@@ -180,4 +186,4 @@ plt.xlabel('epoch')
 plt.ylabel('acc')
 plt.title('MLP Training and validation accuracy by {}'.format(optKind))
 plt.grid()
-plt.savefig('acc{}.png'.format(optKind))
+plt.savefig('acc{}.png'.format('MLP'))
