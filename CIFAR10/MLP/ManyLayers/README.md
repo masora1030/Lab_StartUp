@@ -1,4 +1,4 @@
-## 5層のMLPを構成した。
+## CIFAR10のデータセットに対して、5層のMLPを構成した。
 ### (Affine relu (dropout) | Affine relu (dropout) | Affine relu | Affine relu | Affine (Softmax))
 - 隠れ層のユニット数は、ピラミッド型にしても入力データと同じ数にしてもあまり結果は変わらなかったが、入力データと同じ数の方が若干学習率が高かった。
 - 隠れ層のユニット数を1024(32*32)より大きくするとうまく学習が行かない。
