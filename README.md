@@ -3,3 +3,4 @@
 - MNIST by MLP(SGD)
 - MNIST by CNN(SGD)
 - CIFAR10 by MLP(SGD)
+- CIFAR10 by CNN(SGD)
