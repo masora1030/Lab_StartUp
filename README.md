@@ -1,5 +1,5 @@
 # Lab_StartUp
-作成した画像認識の機械学習モデルのコードとその学習結果色々
+作成した画像認識の機械学習モデルのコードとその学習結果色々<br>
 学習結果の吟味など各ディレクトリのREADME参照
 - MNIST by MLP(SGD)
 - MNIST by CNN(SGD)
