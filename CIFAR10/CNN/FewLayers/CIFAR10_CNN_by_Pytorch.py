@@ -69,18 +69,18 @@ class CNNNet(nn.Module):
         # xAT + b (重みとバイアスを足し合わせる作業と、重みパラメータを保持する機能)
         # Conv2d(in_channels, out_channels(), kernel_size(フィルター), stride=1, padding=0,
         # dilation=1, groups=1, bias=True, padding_mode='zeros')
-        self.conv1 = nn.Conv2d(3, 27, 5) # 32x32x3 -> 28x28x27
-        self.pool = nn.MaxPool2d(2, 2)  # 28x28x27 -> 14x14x27
+        self.conv1 = nn.Conv2d(3, 32, 3) # 32x32x3 -> 30x30x32
+        self.pool = nn.MaxPool2d(2, 2)  # 30x30x32 -> 15x15x32
         self.dropout1 = nn.Dropout2d(0.2)
-        self.conv2 = nn.Conv2d(27, 54, 5)  # 14x14x27 -> 10x10x54
-        self.fc1 = nn.Linear(10*10*54, 1024)
+        self.conv2 = nn.Conv2d(32, 64, 3)  # 15x15x32 -> 13x13x64
+        self.fc1 = nn.Linear(13*13*64, 1024)
         self.fc2 = nn.Linear(1024, 10)
 
     def forward(self, x): # predictに相当(順伝搬)
         x = self.pool(F.relu(self.conv1(x)))
         x = F.relu(self.conv2(x))
         x = self.dropout1(x)
-        x = x.view(-1, 10*10*54)
+        x = x.view(-1, 13*13*64)
         x = F.relu(self.fc1(x))
         x = self.fc2(x)
         return x
