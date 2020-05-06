@@ -61,35 +61,41 @@ test_loader = torch.utils.data.DataLoader(
 
 # CNN
 # CNNモデルの構築。層を増やして8層。
-# (Conv Relu | Conv Relu (dropout) (pooling) | Conv Relu | Conv Relu (dropout) | Conv Relu | Conv Relu
-# | Affine relu | Affine (Softmax))
+# (Conv BN Relu | Conv BN Relu (dropout) (pooling) | Conv BN Relu | Conv BN Relu (dropout)
+# | Conv BN Relu | Conv BN Relu | Affine relu | Affine (Softmax))
 # nn.Moduleを継承している。
 class CNNNet(nn.Module):
     def __init__(self):
         super(CNNNet, self).__init__()
         # xAT + b (重みとバイアスを足し合わせる作業と、重みパラメータを保持する機能)
-        # Conv2d(in_channels, out_channels(), kernel_size(フィルター), stride=1, padding=0,
+        # Conv2d(in_channels, out_channels(), kernel_size(フィルターサイズ), stride=1, padding=0,
         # dilation=1, groups=1, bias=True, padding_mode='zeros')
         self.conv1 = nn.Conv2d(3, 64, 3) # 32x32x3 -> 30x30x64
+        self.bn1 = nn.BatchNorm2d(64)    # Batch Normalization
         self.conv2 = nn.Conv2d(64, 64, 3) # 30x30x64 -> 28x28x64
+        self.bn2 = nn.BatchNorm2d(64)  # Batch Normalization
         self.dropout1 = nn.Dropout2d(0.2)
-        # self.pool = nn.MaxPool2d(2, 2)  # 28x28x64 -> 14x14x32
+        self.pool = nn.MaxPool2d(2, 2)  # 28x28x64 -> 14x14x32
         self.conv3 = nn.Conv2d(64, 128, 3) # 14x14x64 -> 12x12x128
+        self.bn3 = nn.BatchNorm2d(128)  # Batch Normalization
         self.conv4 = nn.Conv2d(128, 128, 3)  # 12x12x128 -> 10x10x128
+        self.bn4 = nn.BatchNorm2d(128)  # Batch Normalization
         self.dropout2 = nn.Dropout2d(0.2)
         self.conv5 = nn.Conv2d(128, 256, 3)  # 10x10x128 -> 8x8x256
+        self.bn5 = nn.BatchNorm2d(256)  # Batch Normalization
         self.conv6 = nn.Conv2d(256, 256, 3)  # 8x8x256 -> 6x6x256
-        self.fc1 = nn.Linear(20*20*256, 1024)
+        self.bn6 = nn.BatchNorm2d(256)  # Batch Normalization
+        self.fc1 = nn.Linear(6*6*256, 1024)
         self.fc2 = nn.Linear(1024, 10)
 
     def forward(self, x): # predictに相当(順伝搬)
-        x = F.relu(self.conv1(x))
-        x = self.dropout1(F.relu(self.conv2(x)))
-        x = F.relu(self.conv3(x))
-        x = self.dropout2(F.relu(self.conv4(x)))
-        x = F.relu(self.conv5(x))
-        x = F.relu(self.conv6(x))
-        x = x.view(-1, 20*20*256)
+        x = F.relu(self.bn1(self.conv1(x)))
+        x = self.pool(self.dropout1(F.relu(self.bn2(self.conv2(x)))))
+        x = F.relu(self.bn3(self.conv3(x)))
+        x = self.dropout2(F.relu(self.bn4(self.conv4(x))))
+        x = F.relu(self.bn5(self.conv5(x)))
+        x = F.relu(self.bn6(self.conv6(x)))
+        x = x.view(-1, 6*6*256)
         x = F.relu(self.fc1(x))
         x = self.fc2(x)
         return x
@@ -107,9 +113,18 @@ network = CNNNet().to(device) # networkにさっき定義したnetworkを代入
 
 # optimizing
 criterion = nn.CrossEntropyLoss() # 交差エントロピーをloss計算に用いる。
-optimizer = optim.SGD(network.parameters(), lr=0.01, momentum=0.9, weight_decay=5e-4) # optimizrに勾配確率降下法を指定
-optKind = 'Momentum SGD'
 
+optimizer = optim.Adam(network.parameters(), lr=0.001) # optimizrに勾配確率降下法を指定
+optKind = 'Adam'
+
+# optimizer = optim.RMSprop(network.parameters(), lr=0.0005, eps=1e-06) # optimizrに勾配確率降下法を指定
+# optKind = 'RMSprop'
+
+# optimizer = optim.SGD(network.parameters(), lr=0.01, weight_decay=5e-4) # optimizrに勾配確率降下法を指定
+# optKind = 'SGD'
+
+# optimizer = optim.SGD(network.parameters(), lr=0.01, momentum=0.9, weight_decay=5e-4) # optimizrに勾配確率降下法を指定
+# optKind = 'MomentumSGD'
 
 
 start_time = time.time()
@@ -196,7 +211,7 @@ plt.xlabel('epoch')
 plt.ylabel('loss')
 plt.title('CNN Training and validation loss by {} (Many Layers)'.format(optKind))
 plt.grid()
-plt.savefig('loss{}.png'.format('CNN_manyLayers'))
+plt.savefig('loss{}_by_{}.png'.format('CNN', optKind))
 
 plt.figure()
 plt.plot(range(num_epochs), train_acc_list, color='blue', linestyle='-', label='train_acc')
@@ -206,4 +221,4 @@ plt.xlabel('epoch')
 plt.ylabel('acc')
 plt.title('CNN Training and validation accuracy by {} (Many Layers)'.format(optKind))
 plt.grid()
-plt.savefig('acc{}.png'.format('CNN_manyLayers'))
+plt.savefig('acc{}_by_{}.png'.format('CNN', optKind))
