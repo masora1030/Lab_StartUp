@@ -137,11 +137,16 @@ network4 = CNNNet().to(device) # networkにさっき定義したnetworkを代入
 optimizer4 = optim.RMSprop(network4.parameters(), lr=0.0005, eps=1e-06) # optimizrにRMSpropを指定
 optKind4 = 'RMSprop'
 
+network5 = CNNNet().to(device) # networkにさっき定義したnetworkを代入
+optimizer5 = optim.Adamax(network5.parameters(), lr=0.002, betas=(0.9, 0.999), eps=1e-08, weight_decay=0) # optimizrにAdamaxを指定
+optKind5 = 'Adamax'
+
+
 
 times, test_acc_list, train_loss_lists, train_acc_lists, val_loss_lists, val_acc_lists = [], [], [], [], [], []
-Optims = [optKind1, optKind2, optKind3, optKind4]
-Optimizers = [optimizer1, optimizer2, optimizer3, optimizer4]
-networks = [network1, network2, network3, network4]
+Optims = [optKind1, optKind2, optKind3, optKind4, optKind5]
+Optimizers = [optimizer1, optimizer2, optimizer3, optimizer4, optimizer5]
+networks = [network1, network2, network3, network4, network5]
 
 for i in range(len(Optims)):
     network = networks[i]
@@ -234,7 +239,7 @@ for i in range(len(Optims)):
 # グラフを用意して画像保存
 import matplotlib.pyplot as plt
 
-Color = ["c", "b", "r", "g"]
+Color = ["c", "b", "r", "g", "m"]
 # save loss figure
 plt.figure()
 for i in range(len(Optims)):
