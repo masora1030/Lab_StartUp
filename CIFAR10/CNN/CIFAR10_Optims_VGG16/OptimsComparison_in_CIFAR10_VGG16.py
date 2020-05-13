@@ -43,19 +43,19 @@ print('test_dataset = ', len(test_dataset)) # 10000
 # データセットからミニバッチ単位でデータを取り出し、ネットワークへ供給するためのローダー(バッチ処理の準備)
 train_loader = torch.utils.data.DataLoader(
     dataset=train_dataset,  # データセットの指定
-    batch_size=100,  # ミニバッチの指定
+    batch_size=64,  # ミニバッチの指定
     shuffle=True,  # シャッフルするかどうかの指定
     num_workers=2)  # コアの数
 
 valid_loader = torch.utils.data.DataLoader(
     dataset=valid_dataset,
-    batch_size=100,
+    batch_size=64,
     shuffle=False,
     num_workers=2)
 
 test_loader = torch.utils.data.DataLoader(
     dataset=test_dataset,
-    batch_size=100,
+    batch_size=64,
     shuffle=False,
     num_workers=2)
 
@@ -314,10 +314,10 @@ Color = ["c", "b", "r", "g", "m"]
 plt.figure()
 for i in range(len(Optims)):
     plt.plot(range(num_epochs), train_loss_lists[i], color=Color[i], linestyle='-',
-             label='train_loss_{}'.format(Optims[i]))
+             label='train_{}'.format(Optims[i]))
     plt.plot(range(num_epochs), val_loss_lists[i], color=Color[i], linestyle='--',
-             label='val_loss_{}'.format(Optims[i]))
-plt.legend()
+             label='val_{}'.format(Optims[i]))
+plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left', borderaxespad=0, fontsize=13)
 plt.xlabel('epoch')
 plt.ylabel('loss')
 plt.title('CNN Training and validation loss by various optimizers')
@@ -328,10 +328,10 @@ plt.savefig('loss{}_by_{}.png'.format('CNN', 'various_optimizers'))
 plt.figure()
 for i in range(len(Optims)):
     plt.plot(range(num_epochs), train_acc_lists[i], color=Color[i], linestyle='-',
-             label='train_loss_{}'.format(Optims[i]))
+             label='train_{}'.format(Optims[i]))
     plt.plot(range(num_epochs), val_acc_lists[i], color=Color[i], linestyle='--',
-             label='val_loss_{}'.format(Optims[i]))
-plt.legend()
+             label='val_{}'.format(Optims[i]))
+plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left', borderaxespad=0, fontsize=13)
 plt.xlabel('epoch')
 plt.ylabel('acc')
 plt.title('CNN Training and validation acc by various optimizers')
