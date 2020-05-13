@@ -322,7 +322,7 @@ plt.xlabel('epoch')
 plt.ylabel('loss')
 plt.title('CNN Training and validation loss by various optimizers')
 plt.grid()
-plt.savefig('loss{}_by_{}.png'.format('CNN', 'various_optimizers'))
+plt.savefig('loss{}_by_{}.png'.format('CNN', 'various_optimizers'), bbox_inches="tight")
 
 # save acc figure
 plt.figure()
@@ -336,7 +336,7 @@ plt.xlabel('epoch')
 plt.ylabel('acc')
 plt.title('CNN Training and validation acc by various optimizers')
 plt.grid()
-plt.savefig('acc{}_by_{}.png'.format('CNN', 'various_optimizers'))
+plt.savefig('acc{}_by_{}.png'.format('CNN', 'various_optimizers'), bbox_inches="tight")
 
 print('')
 print('--------------------------------------------------------------')
