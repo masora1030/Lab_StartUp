@@ -1,0 +1,334 @@
+0it [00:00, ?it/s]  0%|          | 0/170498071 [00:01<?, ?it/s]  0%|          | 8192/170498071 [00:01<58:53, 48248.98it/s]  0%|          | 40960/170498071 [00:01<45:40, 62190.28it/s]  0%|          | 90112/170498071 [00:01<34:56, 81289.27it/s]  0%|          | 221184/170498071 [00:01<25:33, 111047.68it/s]  0%|          | 450560/170498071 [00:01<18:30, 153140.67it/s]  1%|          | 909312/170498071 [00:02<13:14, 213574.01it/s]  1%|          | 1695744/170498071 [00:02<09:24, 299079.72it/s]  2%|▏         | 3399680/170498071 [00:02<06:36, 421861.50it/s]  3%|▎         | 5726208/170498071 [00:02<04:37, 594612.78it/s]  5%|▌         | 8822784/170498071 [00:02<03:12, 837761.20it/s]  7%|▋         | 11935744/170498071 [00:02<02:15, 1173537.33it/s]  9%|▉         | 15032320/170498071 [00:03<01:35, 1630987.60it/s] 10%|█         | 17817600/170498071 [00:03<01:08, 2232487.36it/s] 12%|█▏        | 20930560/170498071 [00:03<00:49, 3026875.90it/s] 14%|█▍        | 24010752/170498071 [00:03<00:36, 4037411.56it/s] 16%|█▌        | 27107328/170498071 [00:03<00:27, 5262761.19it/s] 18%|█▊        | 30023680/170498071 [00:03<00:21, 6633196.84it/s] 19%|█▉        | 32972800/170498071 [00:04<00:16, 8122519.18it/s] 21%|██        | 35921920/170498071 [00:04<00:13, 9644220.06it/s] 23%|██▎       | 38739968/170498071 [00:04<00:12, 10965087.85it/s] 25%|██▍       | 41885696/170498071 [00:04<00:10, 12425854.17it/s] 26%|██▋       | 44982272/170498071 [00:04<00:09, 13651262.56it/s] 28%|██▊       | 48078848/170498071 [00:05<00:08, 14785380.49it/s] 30%|██▉       | 51077120/170498071 [00:05<00:07, 15478810.26it/s] 32%|███▏      | 54157312/170498071 [00:05<00:07, 16069605.99it/s] 34%|███▎      | 57253888/170498071 [00:05<00:06, 16549571.47it/s] 35%|███▌      | 60366848/170498071 [00:05<00:06, 16628959.33it/s] 37%|███▋      | 63496192/170498071 [00:05<00:06, 17414008.26it/s] 39%|███▉      | 66478080/170498071 [00:06<00:05, 17376278.37it/s] 41%|████      | 69476352/170498071 [00:06<00:05, 17369510.26it/s] 43%|████▎     | 72474624/170498071 [00:06<00:05, 17383390.35it/s] 44%|████▍     | 75472896/170498071 [00:06<00:05, 17380657.90it/s] 46%|████▌     | 78520320/170498071 [00:06<00:05, 17464548.42it/s] 48%|████▊     | 81633280/170498071 [00:06<00:05, 17655294.10it/s] 50%|████▉     | 84713472/170498071 [00:07<00:04, 17723684.46it/s] 51%|█████▏    | 87515136/170498071 [00:07<00:04, 17218906.41it/s] 53%|█████▎    | 90578944/170498071 [00:07<00:04, 17401952.55it/s] 55%|█████▍    | 93708288/170498071 [00:07<00:04, 17645284.51it/s] 57%|█████▋    | 96755712/170498071 [00:07<00:04, 17660103.37it/s] 59%|█████▊    | 99786752/170498071 [00:07<00:03, 18833999.88it/s] 60%|█████▉    | 101695488/170498071 [00:08<00:03, 18017084.24it/s] 61%|██████    | 103522304/170498071 [00:08<00:04, 16423231.78it/s] 62%|██████▏   | 105996288/170498071 [00:08<00:03, 17094803.06it/s] 64%|██████▎   | 108601344/170498071 [00:08<00:03, 17655471.01it/s] 65%|██████▍   | 110403584/170498071 [00:08<00:03, 17524455.02it/s] 66%|██████▌   | 112181248/170498071 [00:08<00:03, 16351828.50it/s] 67%|██████▋   | 114696192/170498071 [00:08<00:03, 17727985.77it/s] 68%|██████▊   | 116531200/170498071 [00:08<00:03, 17302766.44it/s] 69%|██████▉   | 118308864/170498071 [00:09<00:03, 16137408.09it/s] 71%|███████   | 120905728/170498071 [00:09<00:02, 18066622.49it/s] 72%|███████▏  | 122822656/170498071 [00:09<00:02, 17371962.86it/s] 73%|███████▎  | 124641280/170498071 [00:09<00:02, 15851628.67it/s] 75%|███████▍  | 127131648/170498071 [00:09<00:02, 16157760.66it/s] 76%|███████▋  | 130162688/170498071 [00:09<00:02, 18442843.24it/s] 78%|███████▊  | 132161536/170498071 [00:09<00:02, 17460609.99it/s] 79%|███████▊  | 134029312/170498071 [00:09<00:02, 15875831.98it/s] 80%|███████▉  | 136372224/170498071 [00:10<00:02, 16287592.06it/s] 82%|████████▏ | 139026432/170498071 [00:10<00:01, 18024103.71it/s] 83%|████████▎ | 140943360/170498071 [00:10<00:01, 17294672.57it/s] 84%|████████▎ | 142761984/170498071 [00:10<00:01, 15845664.74it/s] 85%|████████▌ | 145203200/170498071 [00:10<00:01, 16028021.19it/s] 87%|████████▋ | 148201472/170498071 [00:10<00:01, 18273972.29it/s] 88%|████████▊ | 150183936/170498071 [00:10<00:01, 16877462.88it/s] 89%|████████▉ | 152002560/170498071 [00:10<00:01, 16037543.18it/s] 91%|█████████ | 154394624/170498071 [00:11<00:00, 16725402.05it/s] 92%|█████████▏| 156901376/170498071 [00:11<00:00, 18576798.93it/s] 93%|█████████▎| 158883840/170498071 [00:11<00:00, 16653219.03it/s] 94%|█████████▍| 160669696/170498071 [00:11<00:00, 16548926.00it/s] 96%|█████████▌| 163012608/170498071 [00:11<00:00, 16820382.84it/s] 97%|█████████▋| 164757504/170498071 [00:11<00:00, 16655310.94it/s] 98%|█████████▊| 166469632/170498071 [00:11<00:00, 16185658.40it/s] 99%|█████████▊| 168124416/170498071 [00:11<00:00, 16132723.37it/s]100%|█████████▉| 170385408/170498071 [00:11<00:00, 17441984.83it/s]Downloading https://www.cs.toronto.edu/~kriz/cifar-10-python.tar.gz to ./data_cifar10/cifar-10-python.tar.gz
+Extracting ./data_cifar10/cifar-10-python.tar.gz to ./data_cifar10/
+Files already downloaded and verified
+train_dataset =  40000
+valid_dataset =  10000
+test_dataset =  10000
+Default(NoBlock) training start ...
+170500096it [00:30, 17441984.83it/s]                               Epoch [1/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.1021
+Epoch [2/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.0996
+Epoch [3/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.0974
+Epoch [4/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.0977
+Epoch [5/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.1018
+Epoch [6/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.1037
+Epoch [7/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.0965
+Epoch [8/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.0972
+Epoch [9/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.1026
+Epoch [10/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.0977
+Epoch [11/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.1037
+Epoch [12/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.1026
+Epoch [13/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.0965
+Epoch [14/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.0996
+Epoch [15/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.0972
+Epoch [16/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.0977
+Epoch [17/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.0974
+Epoch [18/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.0972
+Epoch [19/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.1021
+Epoch [20/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.0974
+Epoch [21/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.0965
+Epoch [22/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.0977
+Epoch [23/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.0965
+Epoch [24/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.0972
+Epoch [25/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.0972
+Epoch [26/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.0965
+Epoch [27/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.0974
+Epoch [28/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.1018
+Epoch [29/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.1014
+Epoch [30/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.0972
+Epoch [31/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.0977
+Epoch [32/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.0965
+Epoch [33/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.1014
+Epoch [34/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.1018
+Epoch [35/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.0972
+Epoch [36/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.0974
+Epoch [37/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.0972
+Epoch [38/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.0965
+Epoch [39/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.0972
+Epoch [40/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.0974
+Epoch [41/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.0977
+Epoch [42/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.0974
+Epoch [43/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.0974
+Epoch [44/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.0965
+Epoch [45/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.0977
+Epoch [46/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.1037
+Epoch [47/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.0965
+Epoch [48/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.0996
+Epoch [49/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.0972
+Epoch [50/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.0965
+test_accuracy: 10.0 %
+learning time: 714.114 [sec]
+1block training start ...
+Epoch [1/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.0965
+Epoch [2/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.0972
+Epoch [3/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.0965
+Epoch [4/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.0972
+Epoch [5/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.1018
+Epoch [6/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.0972
+Epoch [7/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.0974
+Epoch [8/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.1026
+Epoch [9/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.0974
+Epoch [10/50], Loss: 0.0360, val_loss: 0.0361, val_acc: 0.1026
+Epoch [11/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.1018
+Epoch [12/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.0977
+Epoch [13/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.0972
+Epoch [14/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.0974
+Epoch [15/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.1037
+Epoch [16/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.0977
+Epoch [17/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.0977
+Epoch [18/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.0965
+Epoch [19/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.0977
+Epoch [20/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.0965
+Epoch [21/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.0974
+Epoch [22/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.0974
+Epoch [23/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.0972
+Epoch [24/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.0965
+Epoch [25/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.0965
+Epoch [26/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.0996
+Epoch [27/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.1018
+Epoch [28/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.0965
+Epoch [29/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.0972
+Epoch [30/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.0977
+Epoch [31/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.0965
+Epoch [32/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.0972
+Epoch [33/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.1037
+Epoch [34/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.0996
+Epoch [35/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.0972
+Epoch [36/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.1014
+Epoch [37/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.0965
+Epoch [38/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.0977
+Epoch [39/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.0965
+Epoch [40/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.0972
+Epoch [41/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.0974
+Epoch [42/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.1021
+Epoch [43/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.0965
+Epoch [44/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.0974
+Epoch [45/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.0965
+Epoch [46/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.0974
+Epoch [47/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.0972
+Epoch [48/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.1037
+Epoch [49/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.0972
+Epoch [50/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.0972
+test_accuracy: 10.0 %
+learning time: 750.618 [sec]
+2blocks training start ...
+Epoch [1/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.0965
+Epoch [2/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.0977
+Epoch [3/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.1021
+Epoch [4/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.0972
+Epoch [5/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.1037
+Epoch [6/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.1014
+Epoch [7/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.1026
+Epoch [8/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.0977
+Epoch [9/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.1026
+Epoch [10/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.0977
+Epoch [11/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.0977
+Epoch [12/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.0972
+Epoch [13/50], Loss: 0.0360, val_loss: 0.0361, val_acc: 0.1018
+Epoch [14/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.0972
+Epoch [15/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.0977
+Epoch [16/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.0977
+Epoch [17/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.0965
+Epoch [18/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.0972
+Epoch [19/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.1014
+Epoch [20/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.1037
+Epoch [21/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.1018
+Epoch [22/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.0972
+Epoch [23/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.0974
+Epoch [24/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.0972
+Epoch [25/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.0972
+Epoch [26/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.0974
+Epoch [27/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.1018
+Epoch [28/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.0972
+Epoch [29/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.0965
+Epoch [30/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.0965
+Epoch [31/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.0977
+Epoch [32/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.0996
+Epoch [33/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.0965
+Epoch [34/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.0965
+Epoch [35/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.0977
+Epoch [36/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.0977
+Epoch [37/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.0996
+Epoch [38/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.1026
+Epoch [39/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.0965
+Epoch [40/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.0972
+Epoch [41/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.0977
+Epoch [42/50], Loss: 0.0360, val_loss: 0.0361, val_acc: 0.0996
+Epoch [43/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.1014
+Epoch [44/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.0974
+Epoch [45/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.0972
+Epoch [46/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.0965
+Epoch [47/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.0996
+Epoch [48/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.0996
+Epoch [49/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.0965
+Epoch [50/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.0974
+test_accuracy: 10.0 %
+learning time: 768.363 [sec]
+3blocks training start ...
+Epoch [1/50], Loss: 0.0360, val_loss: 0.0362, val_acc: 0.0977
+Epoch [2/50], Loss: 0.0339, val_loss: 0.0296, val_acc: 0.1912
+Epoch [3/50], Loss: 0.0292, val_loss: 0.0279, val_acc: 0.2342
+Epoch [4/50], Loss: 0.0274, val_loss: 0.0310, val_acc: 0.2651
+Epoch [5/50], Loss: 0.0261, val_loss: 0.0248, val_acc: 0.3610
+Epoch [6/50], Loss: 0.0252, val_loss: 0.0338, val_acc: 0.2745
+Epoch [7/50], Loss: 0.0236, val_loss: 0.0223, val_acc: 0.4132
+Epoch [8/50], Loss: 0.0214, val_loss: 0.0214, val_acc: 0.4984
+Epoch [9/50], Loss: 0.0195, val_loss: 0.0190, val_acc: 0.5822
+Epoch [10/50], Loss: 0.0177, val_loss: 0.0192, val_acc: 0.5812
+Epoch [11/50], Loss: 0.0166, val_loss: 0.0161, val_acc: 0.6588
+Epoch [12/50], Loss: 0.0152, val_loss: 0.0158, val_acc: 0.6616
+Epoch [13/50], Loss: 0.0146, val_loss: 0.0164, val_acc: 0.6752
+Epoch [14/50], Loss: 0.0135, val_loss: 0.0178, val_acc: 0.6963
+Epoch [15/50], Loss: 0.0126, val_loss: 0.0146, val_acc: 0.7185
+Epoch [16/50], Loss: 0.0117, val_loss: 0.0135, val_acc: 0.7597
+Epoch [17/50], Loss: 0.0111, val_loss: 0.0140, val_acc: 0.7304
+Epoch [18/50], Loss: 0.0106, val_loss: 0.0135, val_acc: 0.7760
+Epoch [19/50], Loss: 0.0099, val_loss: 0.0125, val_acc: 0.7912
+Epoch [20/50], Loss: 0.0095, val_loss: 0.0146, val_acc: 0.7400
+Epoch [21/50], Loss: 0.0091, val_loss: 0.0115, val_acc: 0.7864
+Epoch [22/50], Loss: 0.0084, val_loss: 0.0119, val_acc: 0.7824
+Epoch [23/50], Loss: 0.0080, val_loss: 0.0110, val_acc: 0.8019
+Epoch [24/50], Loss: 0.0076, val_loss: 0.0124, val_acc: 0.8121
+Epoch [25/50], Loss: 0.0074, val_loss: 0.0103, val_acc: 0.8170
+Epoch [26/50], Loss: 0.0071, val_loss: 0.0154, val_acc: 0.8033
+Epoch [27/50], Loss: 0.0065, val_loss: 0.0112, val_acc: 0.8305
+Epoch [28/50], Loss: 0.0062, val_loss: 0.0127, val_acc: 0.8197
+Epoch [29/50], Loss: 0.0057, val_loss: 0.0123, val_acc: 0.8260
+Epoch [30/50], Loss: 0.0058, val_loss: 0.0118, val_acc: 0.8049
+Epoch [31/50], Loss: 0.0054, val_loss: 0.0119, val_acc: 0.8223
+Epoch [32/50], Loss: 0.0054, val_loss: 0.0138, val_acc: 0.8177
+Epoch [33/50], Loss: 0.0057, val_loss: 0.0125, val_acc: 0.8196
+Epoch [34/50], Loss: 0.0050, val_loss: 0.0163, val_acc: 0.7278
+Epoch [35/50], Loss: 0.0050, val_loss: 0.0123, val_acc: 0.8318
+Epoch [36/50], Loss: 0.0044, val_loss: 0.0124, val_acc: 0.8411
+Epoch [37/50], Loss: 0.0058, val_loss: 0.0149, val_acc: 0.8159
+Epoch [38/50], Loss: 0.0045, val_loss: 0.0123, val_acc: 0.8321
+Epoch [39/50], Loss: 0.0044, val_loss: 0.0105, val_acc: 0.8400
+Epoch [40/50], Loss: 0.0039, val_loss: 0.0134, val_acc: 0.8378
+Epoch [41/50], Loss: 0.0040, val_loss: 0.0110, val_acc: 0.8397
+Epoch [42/50], Loss: 0.0040, val_loss: 0.0136, val_acc: 0.7919
+Epoch [43/50], Loss: 0.0040, val_loss: 0.0105, val_acc: 0.8364
+Epoch [44/50], Loss: 0.0039, val_loss: 0.0107, val_acc: 0.8401
+Epoch [45/50], Loss: 0.0035, val_loss: 0.0116, val_acc: 0.8312
+Epoch [46/50], Loss: 0.0033, val_loss: 0.0117, val_acc: 0.8388
+Epoch [47/50], Loss: 0.0035, val_loss: 0.0118, val_acc: 0.8343
+Epoch [48/50], Loss: 0.0033, val_loss: 0.0129, val_acc: 0.8315
+Epoch [49/50], Loss: 0.0035, val_loss: 0.0124, val_acc: 0.8440
+Epoch [50/50], Loss: 0.0030, val_loss: 0.0145, val_acc: 0.8276
+test_accuracy: 81.99 %
+learning time: 790.368 [sec]
+4blocks training start ...
+Epoch [1/50], Loss: 0.0314, val_loss: 0.0277, val_acc: 0.2997
+Epoch [2/50], Loss: 0.0252, val_loss: 0.0217, val_acc: 0.4573
+Epoch [3/50], Loss: 0.0217, val_loss: 0.0210, val_acc: 0.5136
+Epoch [4/50], Loss: 0.0188, val_loss: 0.0181, val_acc: 0.5932
+Epoch [5/50], Loss: 0.0166, val_loss: 0.0139, val_acc: 0.6961
+Epoch [6/50], Loss: 0.0149, val_loss: 0.0143, val_acc: 0.6870
+Epoch [7/50], Loss: 0.0131, val_loss: 0.0125, val_acc: 0.7423
+Epoch [8/50], Loss: 0.0120, val_loss: 0.0109, val_acc: 0.7728
+Epoch [9/50], Loss: 0.0107, val_loss: 0.0115, val_acc: 0.7751
+Epoch [10/50], Loss: 0.0095, val_loss: 0.0101, val_acc: 0.7979
+Epoch [11/50], Loss: 0.0089, val_loss: 0.0107, val_acc: 0.8023
+Epoch [12/50], Loss: 0.0084, val_loss: 0.0112, val_acc: 0.7946
+Epoch [13/50], Loss: 0.0077, val_loss: 0.0104, val_acc: 0.8145
+Epoch [14/50], Loss: 0.0071, val_loss: 0.0127, val_acc: 0.7943
+Epoch [15/50], Loss: 0.0066, val_loss: 0.0114, val_acc: 0.7974
+Epoch [16/50], Loss: 0.0063, val_loss: 0.0092, val_acc: 0.8295
+Epoch [17/50], Loss: 0.0057, val_loss: 0.0098, val_acc: 0.8345
+Epoch [18/50], Loss: 0.0052, val_loss: 0.0119, val_acc: 0.7978
+Epoch [19/50], Loss: 0.0048, val_loss: 0.0121, val_acc: 0.8246
+Epoch [20/50], Loss: 0.0049, val_loss: 0.0122, val_acc: 0.8039
+Epoch [21/50], Loss: 0.0046, val_loss: 0.0118, val_acc: 0.8311
+Epoch [22/50], Loss: 0.0043, val_loss: 0.0109, val_acc: 0.8327
+Epoch [23/50], Loss: 0.0041, val_loss: 0.0106, val_acc: 0.8299
+Epoch [24/50], Loss: 0.0038, val_loss: 0.0113, val_acc: 0.8351
+Epoch [25/50], Loss: 0.0037, val_loss: 0.0111, val_acc: 0.8321
+Epoch [26/50], Loss: 0.0036, val_loss: 0.0116, val_acc: 0.8262
+Epoch [27/50], Loss: 0.0033, val_loss: 0.0135, val_acc: 0.8311
+Epoch [28/50], Loss: 0.0032, val_loss: 0.0115, val_acc: 0.8306
+Epoch [29/50], Loss: 0.0031, val_loss: 0.0136, val_acc: 0.8139
+Epoch [30/50], Loss: 0.0032, val_loss: 0.0110, val_acc: 0.8550
+Epoch [31/50], Loss: 0.0029, val_loss: 0.0117, val_acc: 0.8294
+Epoch [32/50], Loss: 0.0030, val_loss: 0.0125, val_acc: 0.8280
+Epoch [33/50], Loss: 0.0028, val_loss: 0.0148, val_acc: 0.8193
+Epoch [34/50], Loss: 0.0029, val_loss: 0.0148, val_acc: 0.8093
+Epoch [35/50], Loss: 0.0029, val_loss: 0.0111, val_acc: 0.8483
+Epoch [36/50], Loss: 0.0027, val_loss: 0.0124, val_acc: 0.8291
+Epoch [37/50], Loss: 0.0028, val_loss: 0.0109, val_acc: 0.8427
+Epoch [38/50], Loss: 0.0026, val_loss: 0.0146, val_acc: 0.8227
+Epoch [39/50], Loss: 0.0025, val_loss: 0.0120, val_acc: 0.8476
+Epoch [40/50], Loss: 0.0026, val_loss: 0.0114, val_acc: 0.8372
+Epoch [41/50], Loss: 0.0023, val_loss: 0.0128, val_acc: 0.8262
+Epoch [42/50], Loss: 0.0024, val_loss: 0.0121, val_acc: 0.8398
+Epoch [43/50], Loss: 0.0021, val_loss: 0.0148, val_acc: 0.8291
+Epoch [44/50], Loss: 0.0024, val_loss: 0.0124, val_acc: 0.8382
+Epoch [45/50], Loss: 0.0022, val_loss: 0.0116, val_acc: 0.8505
+Epoch [46/50], Loss: 0.0022, val_loss: 0.0127, val_acc: 0.8421
+Epoch [47/50], Loss: 0.0022, val_loss: 0.0131, val_acc: 0.8251
+Epoch [48/50], Loss: 0.0022, val_loss: 0.0130, val_acc: 0.8392
+Epoch [49/50], Loss: 0.0021, val_loss: 0.0119, val_acc: 0.8546
+Epoch [50/50], Loss: 0.0020, val_loss: 0.0131, val_acc: 0.8398
+test_accuracy: 83.49 %
+learning time: 799.023 [sec]
+5blocks training start ...
+Epoch [1/50], Loss: 0.0283, val_loss: 0.0233, val_acc: 0.4140
+Epoch [2/50], Loss: 0.0220, val_loss: 0.0189, val_acc: 0.5833
+Epoch [3/50], Loss: 0.0181, val_loss: 0.0163, val_acc: 0.6519
+Epoch [4/50], Loss: 0.0154, val_loss: 0.0144, val_acc: 0.7012
+Epoch [5/50], Loss: 0.0137, val_loss: 0.0125, val_acc: 0.7448
+Epoch [6/50], Loss: 0.0122, val_loss: 0.0119, val_acc: 0.7576
+Epoch [7/50], Loss: 0.0110, val_loss: 0.0128, val_acc: 0.7393
+Epoch [8/50], Loss: 0.0103, val_loss: 0.0102, val_acc: 0.7933
+Epoch [9/50], Loss: 0.0095, val_loss: 0.0111, val_acc: 0.7929
+Epoch [10/50], Loss: 0.0084, val_loss: 0.0116, val_acc: 0.7770
+Epoch [11/50], Loss: 0.0078, val_loss: 0.0095, val_acc: 0.8200
+Epoch [12/50], Loss: 0.0072, val_loss: 0.0112, val_acc: 0.7923
+Epoch [13/50], Loss: 0.0066, val_loss: 0.0099, val_acc: 0.8188
+Epoch [14/50], Loss: 0.0062, val_loss: 0.0119, val_acc: 0.8047
+Epoch [15/50], Loss: 0.0058, val_loss: 0.0109, val_acc: 0.7981
+Epoch [16/50], Loss: 0.0054, val_loss: 0.0097, val_acc: 0.8245
+Epoch [17/50], Loss: 0.0052, val_loss: 0.0121, val_acc: 0.8013
+Epoch [18/50], Loss: 0.0047, val_loss: 0.0108, val_acc: 0.8167
+Epoch [19/50], Loss: 0.0045, val_loss: 0.0111, val_acc: 0.8304
+Epoch [20/50], Loss: 0.0041, val_loss: 0.0128, val_acc: 0.8227
+Epoch [21/50], Loss: 0.0042, val_loss: 0.0118, val_acc: 0.8296
+Epoch [22/50], Loss: 0.0037, val_loss: 0.0100, val_acc: 0.8417
+Epoch [23/50], Loss: 0.0037, val_loss: 0.0115, val_acc: 0.8210
+Epoch [24/50], Loss: 0.0035, val_loss: 0.0118, val_acc: 0.8318
+Epoch [25/50], Loss: 0.0035, val_loss: 0.0132, val_acc: 0.8126
+Epoch [26/50], Loss: 0.0032, val_loss: 0.0112, val_acc: 0.8369
+Epoch [27/50], Loss: 0.0032, val_loss: 0.0152, val_acc: 0.7836
+Epoch [28/50], Loss: 0.0031, val_loss: 0.0132, val_acc: 0.8166
+Epoch [29/50], Loss: 0.0030, val_loss: 0.0152, val_acc: 0.8108
+Epoch [30/50], Loss: 0.0027, val_loss: 0.0138, val_acc: 0.8197
+Epoch [31/50], Loss: 0.0028, val_loss: 0.0122, val_acc: 0.8256
+Epoch [32/50], Loss: 0.0026, val_loss: 0.0122, val_acc: 0.8279
+Epoch [33/50], Loss: 0.0027, val_loss: 0.0121, val_acc: 0.8368
+Epoch [34/50], Loss: 0.0025, val_loss: 0.0113, val_acc: 0.8350
+Epoch [35/50], Loss: 0.0024, val_loss: 0.0146, val_acc: 0.7974
+Epoch [36/50], Loss: 0.0024, val_loss: 0.0132, val_acc: 0.8195
+Epoch [37/50], Loss: 0.0022, val_loss: 0.0175, val_acc: 0.7887
+Epoch [38/50], Loss: 0.0023, val_loss: 0.0130, val_acc: 0.8355
+Epoch [39/50], Loss: 0.0024, val_loss: 0.0127, val_acc: 0.8367
+Epoch [40/50], Loss: 0.0023, val_loss: 0.0110, val_acc: 0.8429
+Epoch [41/50], Loss: 0.0024, val_loss: 0.0124, val_acc: 0.8363
+Epoch [42/50], Loss: 0.0022, val_loss: 0.0120, val_acc: 0.8355
+Epoch [43/50], Loss: 0.0022, val_loss: 0.0133, val_acc: 0.8306
+Epoch [44/50], Loss: 0.0022, val_loss: 0.0116, val_acc: 0.8391
+Epoch [45/50], Loss: 0.0025, val_loss: 0.0159, val_acc: 0.7908
+Epoch [46/50], Loss: 0.0021, val_loss: 0.0119, val_acc: 0.8453
+Epoch [47/50], Loss: 0.0022, val_loss: 0.0129, val_acc: 0.8318
+Epoch [48/50], Loss: 0.0024, val_loss: 0.0108, val_acc: 0.8287
+Epoch [49/50], Loss: 0.0021, val_loss: 0.0126, val_acc: 0.8333
+Epoch [50/50], Loss: 0.0021, val_loss: 0.0131, val_acc: 0.8288
+test_accuracy: 82.68 %
+learning time: 804.449 [sec]
+
+--------------------------------------------------------------
+
+Batch Norms: Default(NoBlock)  |  test_accuracy: 10.0 %  |  learning time: 714.114 [sec]
+Batch Norms: 1block  |  test_accuracy: 10.0 %  |  learning time: 750.618 [sec]
+Batch Norms: 2blocks  |  test_accuracy: 10.0 %  |  learning time: 768.363 [sec]
+Batch Norms: 3blocks  |  test_accuracy: 81.99 %  |  learning time: 790.368 [sec]
+Batch Norms: 4blocks  |  test_accuracy: 83.49 %  |  learning time: 799.023 [sec]
+Batch Norms: 5blocks  |  test_accuracy: 82.68 %  |  learning time: 804.449 [sec]
+170500096it [1:17:44, 36553.99it/s] 
