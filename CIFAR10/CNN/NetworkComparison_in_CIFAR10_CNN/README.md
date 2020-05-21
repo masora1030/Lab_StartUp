@@ -1,4 +1,6 @@
 ## 自作のネットワークとVGG16に対して、CIFAR10のデータセットを用いて、学習曲線や性能の比較を行った。OptimizerはMomentumSGD
+### My Many CNN model : (Conv BN Relu | Conv BN Relu (dropout) (pooling) | Conv BN Relu | Conv BN Relu (dropout) | Conv BN Relu | Conv BN Relu | Affine relu | Affine (Softmax))
+### My Few CNN model : (Conv BN Relu Pooling | Conv BN Relu (dropout) | Affine relu | Affine (Softmax))
 
 | Network   |      test_accuracy      |  learning time [sec] |
 |----------|:-------------:|------:|
