@@ -82,8 +82,11 @@ class ManyMLPNet(nn.Module):
         self.fc4 = nn.Linear(1024, 1024) # 1024の配列を1024に線形変換
         nn.init.kaiming_normal_(self.fc4.weight)
         self.bn4 = nn.BatchNorm1d(1024)
-        self.fc5 = nn.Linear(1024, 10) # 1024の配列を10に線形変換(出力)
+        self.fc5 = nn.Linear(1024, 1024) # 1024の配列を1024に線形変換
         nn.init.kaiming_normal_(self.fc5.weight)
+        self.bn5 = nn.BatchNorm1d(1024)
+        self.fc6 = nn.Linear(1024, 10) # 1024の配列を10に線形変換(出力)
+        nn.init.kaiming_normal_(self.fc6.weight)
         self.dropout1 = nn.Dropout2d(0.2)
         self.dropout2 = nn.Dropout2d(0.2)
 
@@ -94,7 +97,8 @@ class ManyMLPNet(nn.Module):
         x = self.dropout2(x)
         x = F.relu(self.bn3(self.fc3(x)))
         x = F.relu(self.bn4(self.fc4(x)))
-        return self.fc5(x)
+        x = F.relu(self.bn5(self.fc5(x)))
+        return self.fc6(x)
 
 # Multi Layer Perceptron Network
 # 多層ニューラルネットワークの構築。多層にする。今回は3層。
