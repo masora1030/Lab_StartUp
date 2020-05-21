@@ -5,5 +5,6 @@
 - MNIST by CNN(SGD)
 - CIFAR10 by MLP(SGD)
 - CIFAR10 by CNN(SGD)
-- Comparison of optimizer with CIFAR10
-- Comparison of Normalisation with CIFAR10
+- Comparison of optimizer with CIFAR10 and MNIST by CNN
+- Comparison of Normalisation with CIFAR10 by CNN
+- Comparison of Netsorks with CIFAR10 and MNIST by CNN
