@@ -1,0 +1,168 @@
+train_dataset =  48000
+valid_dataset =  12000
+test_dataset =  10000
+VGG16 training start ...
+Epoch [1/50], Loss: 0.0055, val_loss: 0.0009, val_acc: 0.9865
+Epoch [2/50], Loss: 0.0021, val_loss: 0.0011, val_acc: 0.9838
+Epoch [3/50], Loss: 0.0016, val_loss: 0.0011, val_acc: 0.9838
+Epoch [4/50], Loss: 0.0014, val_loss: 0.0007, val_acc: 0.9898
+Epoch [5/50], Loss: 0.0011, val_loss: 0.0008, val_acc: 0.9894
+Epoch [6/50], Loss: 0.0011, val_loss: 0.0008, val_acc: 0.9898
+Epoch [7/50], Loss: 0.0010, val_loss: 0.0006, val_acc: 0.9923
+Epoch [8/50], Loss: 0.0010, val_loss: 0.0008, val_acc: 0.9912
+Epoch [9/50], Loss: 0.0008, val_loss: 0.0007, val_acc: 0.9913
+Epoch [10/50], Loss: 0.0009, val_loss: 0.0008, val_acc: 0.9892
+Epoch [11/50], Loss: 0.0007, val_loss: 0.0009, val_acc: 0.9880
+Epoch [12/50], Loss: 0.0008, val_loss: 0.0007, val_acc: 0.9913
+Epoch [13/50], Loss: 0.0007, val_loss: 0.0007, val_acc: 0.9906
+Epoch [14/50], Loss: 0.0007, val_loss: 0.0008, val_acc: 0.9904
+Epoch [15/50], Loss: 0.0007, val_loss: 0.0007, val_acc: 0.9919
+Epoch [16/50], Loss: 0.0007, val_loss: 0.0007, val_acc: 0.9908
+Epoch [17/50], Loss: 0.0006, val_loss: 0.0007, val_acc: 0.9926
+Epoch [18/50], Loss: 0.0006, val_loss: 0.0007, val_acc: 0.9922
+Epoch [19/50], Loss: 0.0007, val_loss: 0.0008, val_acc: 0.9918
+Epoch [20/50], Loss: 0.0006, val_loss: 0.0010, val_acc: 0.9883
+Epoch [21/50], Loss: 0.0007, val_loss: 0.0008, val_acc: 0.9902
+Epoch [22/50], Loss: 0.0006, val_loss: 0.0008, val_acc: 0.9915
+Epoch [23/50], Loss: 0.0006, val_loss: 0.0010, val_acc: 0.9887
+Epoch [24/50], Loss: 0.0006, val_loss: 0.0011, val_acc: 0.9892
+Epoch [25/50], Loss: 0.0007, val_loss: 0.0007, val_acc: 0.9928
+Epoch [26/50], Loss: 0.0006, val_loss: 0.0007, val_acc: 0.9932
+Epoch [27/50], Loss: 0.0006, val_loss: 0.0007, val_acc: 0.9929
+Epoch [28/50], Loss: 0.0006, val_loss: 0.0007, val_acc: 0.9917
+Epoch [29/50], Loss: 0.0006, val_loss: 0.0006, val_acc: 0.9932
+Epoch [30/50], Loss: 0.0006, val_loss: 0.0007, val_acc: 0.9918
+Epoch [31/50], Loss: 0.0006, val_loss: 0.0008, val_acc: 0.9905
+Epoch [32/50], Loss: 0.0005, val_loss: 0.0006, val_acc: 0.9940
+Epoch [33/50], Loss: 0.0006, val_loss: 0.0009, val_acc: 0.9883
+Epoch [34/50], Loss: 0.0006, val_loss: 0.0007, val_acc: 0.9924
+Epoch [35/50], Loss: 0.0005, val_loss: 0.0007, val_acc: 0.9914
+Epoch [36/50], Loss: 0.0006, val_loss: 0.0008, val_acc: 0.9912
+Epoch [37/50], Loss: 0.0006, val_loss: 0.0006, val_acc: 0.9929
+Epoch [38/50], Loss: 0.0005, val_loss: 0.0006, val_acc: 0.9934
+Epoch [39/50], Loss: 0.0006, val_loss: 0.0009, val_acc: 0.9895
+Epoch [40/50], Loss: 0.0006, val_loss: 0.0006, val_acc: 0.9934
+Epoch [41/50], Loss: 0.0006, val_loss: 0.0009, val_acc: 0.9897
+Epoch [42/50], Loss: 0.0006, val_loss: 0.0007, val_acc: 0.9918
+Epoch [43/50], Loss: 0.0006, val_loss: 0.0006, val_acc: 0.9934
+Epoch [44/50], Loss: 0.0005, val_loss: 0.0009, val_acc: 0.9915
+Epoch [45/50], Loss: 0.0006, val_loss: 0.0008, val_acc: 0.9913
+Epoch [46/50], Loss: 0.0006, val_loss: 0.0007, val_acc: 0.9916
+Epoch [47/50], Loss: 0.0006, val_loss: 0.0007, val_acc: 0.9921
+Epoch [48/50], Loss: 0.0005, val_loss: 0.0007, val_acc: 0.9937
+Epoch [49/50], Loss: 0.0005, val_loss: 0.0009, val_acc: 0.9895
+Epoch [50/50], Loss: 0.0006, val_loss: 0.0007, val_acc: 0.9905
+test_accuracy: 99.34 %
+learning time: 872.170 [sec]
+MyManyCNN training start ...
+Epoch [1/50], Loss: 0.0019, val_loss: 0.0006, val_acc: 0.9891
+Epoch [2/50], Loss: 0.0006, val_loss: 0.0005, val_acc: 0.9912
+Epoch [3/50], Loss: 0.0005, val_loss: 0.0004, val_acc: 0.9915
+Epoch [4/50], Loss: 0.0003, val_loss: 0.0004, val_acc: 0.9920
+Epoch [5/50], Loss: 0.0003, val_loss: 0.0005, val_acc: 0.9918
+Epoch [6/50], Loss: 0.0002, val_loss: 0.0004, val_acc: 0.9918
+Epoch [7/50], Loss: 0.0002, val_loss: 0.0004, val_acc: 0.9923
+Epoch [8/50], Loss: 0.0002, val_loss: 0.0004, val_acc: 0.9937
+Epoch [9/50], Loss: 0.0002, val_loss: 0.0004, val_acc: 0.9922
+Epoch [10/50], Loss: 0.0002, val_loss: 0.0004, val_acc: 0.9935
+Epoch [11/50], Loss: 0.0001, val_loss: 0.0003, val_acc: 0.9944
+Epoch [12/50], Loss: 0.0001, val_loss: 0.0004, val_acc: 0.9928
+Epoch [13/50], Loss: 0.0001, val_loss: 0.0004, val_acc: 0.9939
+Epoch [14/50], Loss: 0.0001, val_loss: 0.0004, val_acc: 0.9939
+Epoch [15/50], Loss: 0.0001, val_loss: 0.0004, val_acc: 0.9936
+Epoch [16/50], Loss: 0.0001, val_loss: 0.0004, val_acc: 0.9943
+Epoch [17/50], Loss: 0.0001, val_loss: 0.0004, val_acc: 0.9928
+Epoch [18/50], Loss: 0.0001, val_loss: 0.0004, val_acc: 0.9923
+Epoch [19/50], Loss: 0.0001, val_loss: 0.0003, val_acc: 0.9932
+Epoch [20/50], Loss: 0.0001, val_loss: 0.0004, val_acc: 0.9932
+Epoch [21/50], Loss: 0.0001, val_loss: 0.0004, val_acc: 0.9942
+Epoch [22/50], Loss: 0.0001, val_loss: 0.0004, val_acc: 0.9940
+Epoch [23/50], Loss: 0.0001, val_loss: 0.0003, val_acc: 0.9942
+Epoch [24/50], Loss: 0.0001, val_loss: 0.0004, val_acc: 0.9932
+Epoch [25/50], Loss: 0.0001, val_loss: 0.0004, val_acc: 0.9934
+Epoch [26/50], Loss: 0.0001, val_loss: 0.0004, val_acc: 0.9926
+Epoch [27/50], Loss: 0.0001, val_loss: 0.0004, val_acc: 0.9938
+Epoch [28/50], Loss: 0.0001, val_loss: 0.0004, val_acc: 0.9935
+Epoch [29/50], Loss: 0.0001, val_loss: 0.0003, val_acc: 0.9942
+Epoch [30/50], Loss: 0.0001, val_loss: 0.0004, val_acc: 0.9938
+Epoch [31/50], Loss: 0.0001, val_loss: 0.0004, val_acc: 0.9937
+Epoch [32/50], Loss: 0.0001, val_loss: 0.0003, val_acc: 0.9945
+Epoch [33/50], Loss: 0.0001, val_loss: 0.0004, val_acc: 0.9922
+Epoch [34/50], Loss: 0.0001, val_loss: 0.0004, val_acc: 0.9928
+Epoch [35/50], Loss: 0.0001, val_loss: 0.0003, val_acc: 0.9940
+Epoch [36/50], Loss: 0.0001, val_loss: 0.0003, val_acc: 0.9934
+Epoch [37/50], Loss: 0.0001, val_loss: 0.0003, val_acc: 0.9948
+Epoch [38/50], Loss: 0.0001, val_loss: 0.0004, val_acc: 0.9925
+Epoch [39/50], Loss: 0.0001, val_loss: 0.0004, val_acc: 0.9933
+Epoch [40/50], Loss: 0.0001, val_loss: 0.0004, val_acc: 0.9934
+Epoch [41/50], Loss: 0.0001, val_loss: 0.0004, val_acc: 0.9927
+Epoch [42/50], Loss: 0.0001, val_loss: 0.0004, val_acc: 0.9938
+Epoch [43/50], Loss: 0.0001, val_loss: 0.0004, val_acc: 0.9935
+Epoch [44/50], Loss: 0.0001, val_loss: 0.0004, val_acc: 0.9928
+Epoch [45/50], Loss: 0.0001, val_loss: 0.0004, val_acc: 0.9926
+Epoch [46/50], Loss: 0.0001, val_loss: 0.0004, val_acc: 0.9938
+Epoch [47/50], Loss: 0.0001, val_loss: 0.0004, val_acc: 0.9941
+Epoch [48/50], Loss: 0.0001, val_loss: 0.0003, val_acc: 0.9941
+Epoch [49/50], Loss: 0.0000, val_loss: 0.0003, val_acc: 0.9949
+Epoch [50/50], Loss: 0.0000, val_loss: 0.0003, val_acc: 0.9948
+test_accuracy: 99.46 %
+learning time: 351.942 [sec]
+MyFewCNN training start ...
+Epoch [1/50], Loss: 0.0021, val_loss: 0.0009, val_acc: 0.9832
+Epoch [2/50], Loss: 0.0006, val_loss: 0.0009, val_acc: 0.9833
+Epoch [3/50], Loss: 0.0004, val_loss: 0.0006, val_acc: 0.9881
+Epoch [4/50], Loss: 0.0003, val_loss: 0.0006, val_acc: 0.9885
+Epoch [5/50], Loss: 0.0002, val_loss: 0.0005, val_acc: 0.9901
+Epoch [6/50], Loss: 0.0001, val_loss: 0.0005, val_acc: 0.9902
+Epoch [7/50], Loss: 0.0001, val_loss: 0.0005, val_acc: 0.9908
+Epoch [8/50], Loss: 0.0001, val_loss: 0.0005, val_acc: 0.9908
+Epoch [9/50], Loss: 0.0001, val_loss: 0.0005, val_acc: 0.9911
+Epoch [10/50], Loss: 0.0001, val_loss: 0.0005, val_acc: 0.9915
+Epoch [11/50], Loss: 0.0001, val_loss: 0.0005, val_acc: 0.9916
+Epoch [12/50], Loss: 0.0000, val_loss: 0.0005, val_acc: 0.9916
+Epoch [13/50], Loss: 0.0000, val_loss: 0.0004, val_acc: 0.9911
+Epoch [14/50], Loss: 0.0001, val_loss: 0.0005, val_acc: 0.9912
+Epoch [15/50], Loss: 0.0000, val_loss: 0.0004, val_acc: 0.9915
+Epoch [16/50], Loss: 0.0000, val_loss: 0.0004, val_acc: 0.9915
+Epoch [17/50], Loss: 0.0000, val_loss: 0.0004, val_acc: 0.9911
+Epoch [18/50], Loss: 0.0000, val_loss: 0.0005, val_acc: 0.9906
+Epoch [19/50], Loss: 0.0000, val_loss: 0.0004, val_acc: 0.9918
+Epoch [20/50], Loss: 0.0000, val_loss: 0.0005, val_acc: 0.9912
+Epoch [21/50], Loss: 0.0000, val_loss: 0.0004, val_acc: 0.9914
+Epoch [22/50], Loss: 0.0000, val_loss: 0.0004, val_acc: 0.9913
+Epoch [23/50], Loss: 0.0001, val_loss: 0.0005, val_acc: 0.9906
+Epoch [24/50], Loss: 0.0001, val_loss: 0.0005, val_acc: 0.9915
+Epoch [25/50], Loss: 0.0001, val_loss: 0.0004, val_acc: 0.9916
+Epoch [26/50], Loss: 0.0000, val_loss: 0.0005, val_acc: 0.9908
+Epoch [27/50], Loss: 0.0001, val_loss: 0.0005, val_acc: 0.9909
+Epoch [28/50], Loss: 0.0000, val_loss: 0.0004, val_acc: 0.9914
+Epoch [29/50], Loss: 0.0000, val_loss: 0.0005, val_acc: 0.9910
+Epoch [30/50], Loss: 0.0001, val_loss: 0.0004, val_acc: 0.9916
+Epoch [31/50], Loss: 0.0001, val_loss: 0.0005, val_acc: 0.9912
+Epoch [32/50], Loss: 0.0000, val_loss: 0.0005, val_acc: 0.9904
+Epoch [33/50], Loss: 0.0001, val_loss: 0.0004, val_acc: 0.9910
+Epoch [34/50], Loss: 0.0000, val_loss: 0.0005, val_acc: 0.9910
+Epoch [35/50], Loss: 0.0001, val_loss: 0.0005, val_acc: 0.9910
+Epoch [36/50], Loss: 0.0001, val_loss: 0.0005, val_acc: 0.9902
+Epoch [37/50], Loss: 0.0001, val_loss: 0.0005, val_acc: 0.9901
+Epoch [38/50], Loss: 0.0001, val_loss: 0.0007, val_acc: 0.9853
+Epoch [39/50], Loss: 0.0001, val_loss: 0.0005, val_acc: 0.9909
+Epoch [40/50], Loss: 0.0000, val_loss: 0.0004, val_acc: 0.9916
+Epoch [41/50], Loss: 0.0001, val_loss: 0.0005, val_acc: 0.9906
+Epoch [42/50], Loss: 0.0000, val_loss: 0.0004, val_acc: 0.9912
+Epoch [43/50], Loss: 0.0001, val_loss: 0.0005, val_acc: 0.9907
+Epoch [44/50], Loss: 0.0001, val_loss: 0.0005, val_acc: 0.9911
+Epoch [45/50], Loss: 0.0000, val_loss: 0.0004, val_acc: 0.9912
+Epoch [46/50], Loss: 0.0001, val_loss: 0.0005, val_acc: 0.9912
+Epoch [47/50], Loss: 0.0000, val_loss: 0.0005, val_acc: 0.9902
+Epoch [48/50], Loss: 0.0000, val_loss: 0.0005, val_acc: 0.9914
+Epoch [49/50], Loss: 0.0000, val_loss: 0.0004, val_acc: 0.9912
+Epoch [50/50], Loss: 0.0001, val_loss: 0.0005, val_acc: 0.9908
+test_accuracy: 99.08 %
+learning time: 260.276 [sec]
+
+--------------------------------------------------------------
+
+network: VGG16  |  test_accuracy: 99.34 %  |  learning time: 872.170 [sec]
+network: MyManyCNN  |  test_accuracy: 99.46 %  |  learning time: 351.942 [sec]
+network: MyFewCNN  |  test_accuracy: 99.08 %  |  learning time: 260.276 [sec]
