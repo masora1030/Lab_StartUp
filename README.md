@@ -8,6 +8,7 @@
 - Comparison of Optimizer with CIFAR10 and MNIST by VGG16
 - Comparison of Normalisation with CIFAR10 by VGG16
 - Comparison of Netsorks with CIFAR10 and MNIST by CNN and MLP
+- Comparison of DropOut with CIFAR10 by CNN
 
 詳しいまとめは下記HackMDに<br>
 [Yokota Rio Lab StartUp Program](https://hackmd.io/hWTQgyyMT2KboLjian4DWg?view#Yokota-Rio-Lab-StartUp-Program)
