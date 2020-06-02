@@ -8,28 +8,30 @@ import torchvision.transforms as transforms
 import time
 # CNNの間ではDropoutはあまり挟まない
 
+import torchvision.models as models
+
 # データ正規化
-# form = transforms.Compose([
-#            transforms.ToTensor(),
-#            transforms.Normalize(
-#                 [0.5, 0.5, 0.5],  # RGB 平均
-#                 [0.5, 0.5, 0.5]  # RGB 標準偏差
-#            )
-#        ])
+form = transforms.Compose([
+           transforms.ToTensor(),
+           transforms.Normalize(
+                [0.4914, 0.4822, 0.4465],  # RGB 平均
+                [0.2023, 0.1994, 0.2010]  # RGB 標準偏差
+           )
+       ])
 
 # load CIFAR10 data
 train_Dataset = dsets.CIFAR10(  # CIFAR10 default dataset
     root='./data_cifar10/',  # rootで指定したフォルダーを作成して生データを展開。これは必須。
     train=True,  # 学習かテストかの選択。これは学習用のデータセット
-    # transform=form,  # 正規化
-    transform=transforms.ToTensor(),  # Pytroch のテンソルに変換する  # 自動で形式を変換するのでラベルをOne_hotにする必要等がない。
+    transform=form,  # 正規化
+    # transform=transforms.ToTensor(),  # Pytroch のテンソルに変換する  # 自動で形式を変換するのでラベルをOne_hotにする必要等がない。
     download=True)  # ダウンロードするかどうかの選択(当然する) ここには正解ラベルのデータと入力文字のデータの対がまとめて入っている。.
 
 test_dataset = dsets.CIFAR10(
     root='./data_cifar10/',
     train=False, # 学習かテストかの選択。これはテスト用のデータセット
-    # transform=form,  # 正規化
-    transform=transforms.ToTensor(),  # Pytroch のテンソルに変換する。 # 自動で形式を変換するのでラベルをOne_hotにする必要等がない。
+    transform=form,  # 正規化
+    # transform=transforms.ToTensor(),  # Pytroch のテンソルに変換する。 # 自動で形式を変換するのでラベルをOne_hotにする必要等がない。
     download=True)  # ダウンロードするかどうかの選択(当然する)
 
 train_dataset, valid_dataset = torch.utils.data.random_split(  # データセットの分割(validation)
@@ -65,9 +67,12 @@ test_loader = torch.utils.data.DataLoader(
 # CNN
 # CNNモデルの構築。今回はVGG16を用いる
 class CNNNet(nn.Module):
-    def __init__(self): # , num_classes):
+    def __init__(self, init_weights=True): # , num_classes):
         super(CNNNet, self).__init__()
+        self.avgpool = nn.AdaptiveAvgPool2d((7, 7))
         num_classes=10
+        if init_weights:
+            self._initialize_weights()
 
         self.block1_output = nn.Sequential (
             nn.Conv2d(3, 64, kernel_size=3, padding=1),
@@ -129,13 +134,13 @@ class CNNNet(nn.Module):
         )
 
         self.classifier = nn.Sequential(
-            nn.Linear(512, 512),  #512 * 7 * 7, 4096),
+            nn.Linear(512 * 7 * 7, 4096),
             nn.ReLU(True),
             nn.Dropout(),
-            nn.Linear(512, 32 ),  #4096, 4096),
+            nn.Linear(4096, 4096),
             nn.ReLU(True),
             nn.Dropout(),
-            nn.Linear(32, num_classes),  #4096
+            nn.Linear(4096, num_classes),
         )
 
     def forward(self, x):
@@ -144,19 +149,35 @@ class CNNNet(nn.Module):
         x = self.block3_output(x)
         x = self.block4_output(x)
         x = self.block5_output(x)
-        #print(x.size())
-        x = x.view(x.size(0), -1)
+        x = self.avgpool(x)
+        x = torch.flatten(x, 1)
         x = self.classifier(x)
         return x
+
+    def _initialize_weights(self):
+        for m in self.modules():
+            if isinstance(m, nn.Conv2d):
+                nn.init.kaiming_normal_(m.weight, mode='fan_out', nonlinearity='relu')
+                if m.bias is not None:
+                    nn.init.constant_(m.bias, 0)
+            elif isinstance(m, nn.BatchNorm2d):
+                nn.init.constant_(m.weight, 1)
+                nn.init.constant_(m.bias, 0)
+            elif isinstance(m, nn.Linear):
+                nn.init.normal_(m.weight, 0, 0.01)
+                nn.init.constant_(m.bias, 0)
 
     # accはoptimizerを用いた学習を記述する中で計算をする。(1エポックごとに)
 
     # 損失計算の定義は必要ない。(optimizingのcriterionでloss関数に交差エントロピーを指定)
 
 class CNNNet1(nn.Module):
-    def __init__(self): # , num_classes):
+    def __init__(self, init_weights=True): # , num_classes):
         super(CNNNet1, self).__init__()
+        self.avgpool = nn.AdaptiveAvgPool2d((7, 7))
         num_classes=10
+        if init_weights:
+            self._initialize_weights()
 
         self.block1_output = nn.Sequential (
             nn.Conv2d(3, 64, kernel_size=3, padding=1),
@@ -218,13 +239,13 @@ class CNNNet1(nn.Module):
         )
 
         self.classifier = nn.Sequential(
-            nn.Linear(512, 512),  #512 * 7 * 7, 4096),
+            nn.Linear(512 * 7 * 7, 4096),
             nn.ReLU(True),
             nn.Dropout(),
-            nn.Linear(512, 32 ),  #4096, 4096),
+            nn.Linear(4096, 4096),
             nn.ReLU(True),
             nn.Dropout(),
-            nn.Linear(32, num_classes),  #4096
+            nn.Linear(4096, num_classes),
         )
 
     def forward(self, x):
@@ -233,15 +254,35 @@ class CNNNet1(nn.Module):
         x = self.block3_output(x)
         x = self.block4_output(x)
         x = self.block5_output(x)
-        #print(x.size())
-        x = x.view(x.size(0), -1)
+        x = self.avgpool(x)
+        x = torch.flatten(x, 1)
         x = self.classifier(x)
         return x
+
+    def _initialize_weights(self):
+        for m in self.modules():
+            if isinstance(m, nn.Conv2d):
+                nn.init.kaiming_normal_(m.weight, mode='fan_out', nonlinearity='relu')
+                if m.bias is not None:
+                    nn.init.constant_(m.bias, 0)
+            elif isinstance(m, nn.BatchNorm2d):
+                nn.init.constant_(m.weight, 1)
+                nn.init.constant_(m.bias, 0)
+            elif isinstance(m, nn.Linear):
+                nn.init.normal_(m.weight, 0, 0.01)
+                nn.init.constant_(m.bias, 0)
+
+    # accはoptimizerを用いた学習を記述する中で計算をする。(1エポックごとに)
+
+    # 損失計算の定義は必要ない。(optimizingのcriterionでloss関数に交差エントロピーを指定)
 
 class CNNNet2(nn.Module):
-    def __init__(self): # , num_classes):
+    def __init__(self, init_weights=True): # , num_classes):
         super(CNNNet2, self).__init__()
+        self.avgpool = nn.AdaptiveAvgPool2d((7, 7))
         num_classes=10
+        if init_weights:
+            self._initialize_weights()
 
         self.block1_output = nn.Sequential (
             nn.Conv2d(3, 64, kernel_size=3, padding=1),
@@ -303,13 +344,13 @@ class CNNNet2(nn.Module):
         )
 
         self.classifier = nn.Sequential(
-            nn.Linear(512, 512),  #512 * 7 * 7, 4096),
+            nn.Linear(512 * 7 * 7, 4096),
             nn.ReLU(True),
             nn.Dropout(),
-            nn.Linear(512, 32 ),  #4096, 4096),
+            nn.Linear(4096, 4096),
             nn.ReLU(True),
             nn.Dropout(),
-            nn.Linear(32, num_classes),  #4096
+            nn.Linear(4096, num_classes),
         )
 
     def forward(self, x):
@@ -318,16 +359,36 @@ class CNNNet2(nn.Module):
         x = self.block3_output(x)
         x = self.block4_output(x)
         x = self.block5_output(x)
-        #print(x.size())
-        x = x.view(x.size(0), -1)
+        x = self.avgpool(x)
+        x = torch.flatten(x, 1)
         x = self.classifier(x)
         return x
+
+    def _initialize_weights(self):
+        for m in self.modules():
+            if isinstance(m, nn.Conv2d):
+                nn.init.kaiming_normal_(m.weight, mode='fan_out', nonlinearity='relu')
+                if m.bias is not None:
+                    nn.init.constant_(m.bias, 0)
+            elif isinstance(m, nn.BatchNorm2d):
+                nn.init.constant_(m.weight, 1)
+                nn.init.constant_(m.bias, 0)
+            elif isinstance(m, nn.Linear):
+                nn.init.normal_(m.weight, 0, 0.01)
+                nn.init.constant_(m.bias, 0)
+
+    # accはoptimizerを用いた学習を記述する中で計算をする。(1エポックごとに)
+
+    # 損失計算の定義は必要ない。(optimizingのcriterionでloss関数に交差エントロピーを指定)
 
 
 class CNNNet3(nn.Module):
-    def __init__(self): # , num_classes):
+    def __init__(self, init_weights=True): # , num_classes):
         super(CNNNet3, self).__init__()
+        self.avgpool = nn.AdaptiveAvgPool2d((7, 7))
         num_classes=10
+        if init_weights:
+            self._initialize_weights()
 
         self.block1_output = nn.Sequential (
             nn.Conv2d(3, 64, kernel_size=3, padding=1),
@@ -389,13 +450,13 @@ class CNNNet3(nn.Module):
         )
 
         self.classifier = nn.Sequential(
-            nn.Linear(512, 512),  #512 * 7 * 7, 4096),
+            nn.Linear(512 * 7 * 7, 4096),
             nn.ReLU(True),
             nn.Dropout(),
-            nn.Linear(512, 32 ),  #4096, 4096),
+            nn.Linear(4096, 4096),
             nn.ReLU(True),
             nn.Dropout(),
-            nn.Linear(32, num_classes),  #4096
+            nn.Linear(4096, num_classes),
         )
 
     def forward(self, x):
@@ -404,16 +465,36 @@ class CNNNet3(nn.Module):
         x = self.block3_output(x)
         x = self.block4_output(x)
         x = self.block5_output(x)
-        #print(x.size())
-        x = x.view(x.size(0), -1)
+        x = self.avgpool(x)
+        x = torch.flatten(x, 1)
         x = self.classifier(x)
         return x
+
+    def _initialize_weights(self):
+        for m in self.modules():
+            if isinstance(m, nn.Conv2d):
+                nn.init.kaiming_normal_(m.weight, mode='fan_out', nonlinearity='relu')
+                if m.bias is not None:
+                    nn.init.constant_(m.bias, 0)
+            elif isinstance(m, nn.BatchNorm2d):
+                nn.init.constant_(m.weight, 1)
+                nn.init.constant_(m.bias, 0)
+            elif isinstance(m, nn.Linear):
+                nn.init.normal_(m.weight, 0, 0.01)
+                nn.init.constant_(m.bias, 0)
+
+    # accはoptimizerを用いた学習を記述する中で計算をする。(1エポックごとに)
+
+    # 損失計算の定義は必要ない。(optimizingのcriterionでloss関数に交差エントロピーを指定)
 
 
 class CNNNet4(nn.Module):
-    def __init__(self): # , num_classes):
+    def __init__(self, init_weights=True): # , num_classes):
         super(CNNNet4, self).__init__()
+        self.avgpool = nn.AdaptiveAvgPool2d((7, 7))
         num_classes=10
+        if init_weights:
+            self._initialize_weights()
 
         self.block1_output = nn.Sequential (
             nn.Conv2d(3, 64, kernel_size=3, padding=1),
@@ -475,13 +556,13 @@ class CNNNet4(nn.Module):
         )
 
         self.classifier = nn.Sequential(
-            nn.Linear(512, 512),  #512 * 7 * 7, 4096),
+            nn.Linear(512 * 7 * 7, 4096),
             nn.ReLU(True),
             nn.Dropout(),
-            nn.Linear(512, 32 ),  #4096, 4096),
+            nn.Linear(4096, 4096),
             nn.ReLU(True),
             nn.Dropout(),
-            nn.Linear(32, num_classes),  #4096
+            nn.Linear(4096, num_classes),
         )
 
     def forward(self, x):
@@ -490,16 +571,37 @@ class CNNNet4(nn.Module):
         x = self.block3_output(x)
         x = self.block4_output(x)
         x = self.block5_output(x)
-        #print(x.size())
-        x = x.view(x.size(0), -1)
+        x = self.avgpool(x)
+        x = torch.flatten(x, 1)
         x = self.classifier(x)
         return x
+
+    def _initialize_weights(self):
+        for m in self.modules():
+            if isinstance(m, nn.Conv2d):
+                nn.init.kaiming_normal_(m.weight, mode='fan_out', nonlinearity='relu')
+                if m.bias is not None:
+                    nn.init.constant_(m.bias, 0)
+            elif isinstance(m, nn.BatchNorm2d):
+                nn.init.constant_(m.weight, 1)
+                nn.init.constant_(m.bias, 0)
+            elif isinstance(m, nn.Linear):
+                nn.init.normal_(m.weight, 0, 0.01)
+                nn.init.constant_(m.bias, 0)
+
+    # accはoptimizerを用いた学習を記述する中で計算をする。(1エポックごとに)
+
+    # 損失計算の定義は必要ない。(optimizingのcriterionでloss関数に交差エントロピーを指定)
+
 
 
 class CNNNet5(nn.Module):
-    def __init__(self): # , num_classes):
+    def __init__(self, init_weights=True): # , num_classes):
         super(CNNNet5, self).__init__()
+        self.avgpool = nn.AdaptiveAvgPool2d((7, 7))
         num_classes=10
+        if init_weights:
+            self._initialize_weights()
 
         self.block1_output = nn.Sequential (
             nn.Conv2d(3, 64, kernel_size=3, padding=1),
@@ -561,13 +663,13 @@ class CNNNet5(nn.Module):
         )
 
         self.classifier = nn.Sequential(
-            nn.Linear(512, 512),  #512 * 7 * 7, 4096),
+            nn.Linear(512 * 7 * 7, 4096),
             nn.ReLU(True),
             nn.Dropout(),
-            nn.Linear(512, 32 ),  #4096, 4096),
+            nn.Linear(4096, 4096),
             nn.ReLU(True),
             nn.Dropout(),
-            nn.Linear(32, num_classes),  #4096
+            nn.Linear(4096, num_classes),
         )
 
     def forward(self, x):
@@ -576,10 +678,28 @@ class CNNNet5(nn.Module):
         x = self.block3_output(x)
         x = self.block4_output(x)
         x = self.block5_output(x)
-        #print(x.size())
-        x = x.view(x.size(0), -1)
+        x = self.avgpool(x)
+        x = torch.flatten(x, 1)
         x = self.classifier(x)
         return x
+
+    def _initialize_weights(self):
+        for m in self.modules():
+            if isinstance(m, nn.Conv2d):
+                nn.init.kaiming_normal_(m.weight, mode='fan_out', nonlinearity='relu')
+                if m.bias is not None:
+                    nn.init.constant_(m.bias, 0)
+            elif isinstance(m, nn.BatchNorm2d):
+                nn.init.constant_(m.weight, 1)
+                nn.init.constant_(m.bias, 0)
+            elif isinstance(m, nn.Linear):
+                nn.init.normal_(m.weight, 0, 0.01)
+                nn.init.constant_(m.bias, 0)
+
+    # accはoptimizerを用いた学習を記述する中で計算をする。(1エポックごとに)
+
+    # 損失計算の定義は必要ない。(optimizingのcriterionでloss関数に交差エントロピーを指定)
+
 
 # select device
 # GPU or CPU? (利用可能ならGPUを使う)
@@ -594,17 +714,17 @@ criterion = nn.CrossEntropyLoss() # 交差エントロピーをloss計算に用�
 # ここから比較のコード
 
 
-network1 = CNNNet().to(device) # networkにさっき定義したnetworkを代入
-optimizer1 = optim.SGD(network1.parameters(), lr=0.01, momentum=0.9, weight_decay=5e-4) # optimizrにMomentumSGDを指定
-optKind1 = 'Default(NoBlock)'
-
-network2 = CNNNet1().to(device) # networkにさっき定義したnetworkを代入
-optimizer2 = optim.SGD(network2.parameters(), lr=0.01, momentum=0.9, weight_decay=5e-4) # optimizrにMomentumSGDを指定
-optKind2 = '1block'
-
-network3 = CNNNet2().to(device) # networkにさっき定義したnetworkを代入
-optimizer3 = optim.SGD(network3.parameters(), lr=0.01, momentum=0.9, weight_decay=5e-4) # optimizrにMomentumSGDを指定
-optKind3 = '2blocks'
+# network1 = CNNNet().to(device) # networkにさっき定義したnetworkを代入
+# optimizer1 = optim.SGD(network1.parameters(), lr=0.01, momentum=0.9, weight_decay=5e-4) # optimizrにMomentumSGDを指定
+# optKind1 = 'Default(NoBlock)'
+#
+# network2 = CNNNet1().to(device) # networkにさっき定義したnetworkを代入
+# optimizer2 = optim.SGD(network2.parameters(), lr=0.01, momentum=0.9, weight_decay=5e-4) # optimizrにMomentumSGDを指定
+# optKind2 = '1block'
+#
+# network3 = CNNNet2().to(device) # networkにさっき定義したnetworkを代入
+# optimizer3 = optim.SGD(network3.parameters(), lr=0.01, momentum=0.9, weight_decay=5e-4) # optimizrにMomentumSGDを指定
+# optKind3 = '2blocks'
 
 network4 = CNNNet3().to(device) # networkにさっき定義したnetworkを代入
 optimizer4 = optim.SGD(network4.parameters(), lr=0.01, momentum=0.9, weight_decay=5e-4) # optimizrにMomentumSGDを指定
@@ -618,11 +738,19 @@ network6 = CNNNet5().to(device) # networkにさっき定義したnetworkを代�
 optimizer6 = optim.SGD(network6.parameters(), lr=0.01, momentum=0.9, weight_decay=5e-4) # optimizrにMomentumSGDを指定
 optKind6 = '5blocks'
 
+network7 = models.vgg16(num_classes=10).to(device) # networkにさっき定義したnetworkを代入
+optimizer7 = optim.SGD(network7.parameters(), lr=0.01, momentum=0.9, weight_decay=5e-4) # optimizrにMomentumSGDを指定
+optKind7 = 'OfficialVGG_nonBN'
+
+network8 = models.vgg16_bn(num_classes=10).to(device) # networkにさっき定義したnetworkを代入
+optimizer8 = optim.SGD(network8.parameters(), lr=0.01, momentum=0.9, weight_decay=5e-4) # optimizrにMomentumSGDを指定
+optKind8 = 'OfficialVGG_fullBN'
+
 
 times, test_acc_list, train_loss_lists, train_acc_lists, val_loss_lists, val_acc_lists = [], [], [], [], [], []
-Optims = [optKind1, optKind2, optKind3, optKind4, optKind5, optKind6]
-Optimizers = [optimizer1, optimizer2, optimizer3, optimizer4, optimizer5, optimizer6]
-networks = [network1, network2, network3, network4, network5, network6]
+Optims = [optKind4, optKind5, optKind6, optKind7, optKind8]
+Optimizers = [optimizer4, optimizer5, optimizer6, optimizer7, optimizer8]
+networks = [network4, network5, network6, network7, network8]
 
 for i in range(len(Optims)):
     network = networks[i]
@@ -739,7 +867,7 @@ for i in range(len(Optims)):
 
 
 
-Color = ["c", "b", "r", "g", "y", "m"]
+Color = ["c", "b", "r", "g", "y", "m", "k", '#a65628']
 # save loss figure
 plt.figure()
 for i in range(len(Optims)):
